@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-NewTest">
-              <span class="suite-name border-passed">NewTest</span>
+            <a href="#" class="navigator-link" panel-name="suite-suite">
+              <span class="suite-name border-failed">suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-NewTest">
-                    <span>[unset file name]</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-suite">
+                    <span>C:\Users\Coderz-test\Desktop\cucumberFramework\Automation\suite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-NewTest">
+                  <a href="#" class="navigator-link " panel-name="testlist-suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-NewTest">
+                  <a href="#" class="navigator-link " panel-name="group-suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-NewTest">
+                  <a href="#" class="navigator-link " panel-name="times-suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-NewTest">
+                  <a href="#" class="navigator-link " panel-name="reporter-suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-NewTest">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-NewTest">
+                  <a href="#" class="navigator-link " panel-name="chronological-suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-NewTest" class="hide-methods passed suite-NewTest"> (hide)</a> <!-- hide-methods passed suite-NewTest -->
-                      <a href="#" panel-name="suite-NewTest" class="show-methods passed suite-NewTest"> (show)</a> <!-- show-methods passed suite-NewTest -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-suite" class="hide-methods failed suite-suite"> (hide)</a> <!-- hide-methods failed suite-suite -->
+                      <a href="#" panel-name="suite-suite" class="show-methods failed suite-suite"> (show)</a> <!-- show-methods failed suite-suite -->
                     </span>
-                    <div class="method-list-content passed suite-NewTest">
+                    <div class="method-list-content failed suite-suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-NewTest" title="NewTest" hash-for-method="test01">test01</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="NewTest" hash-for-method="test01">test01</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-NewTest -->
+                    </div> <!-- method-list-content failed suite-suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,10 +116,10 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-NewTest" class="panel NewTest">
-          <div class="suite-NewTest-class-passed">
+        <div panel-name="suite-suite" class="panel suite">
+          <div class="suite-suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">NewTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,56 +128,68 @@
                   <a name="test01">
                   </a> <!-- test01 -->
                   <span class="method-name">test01</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at NewTest.test01(NewTest.java:10)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-NewTest-class-passed -->
-        </div> <!-- panel NewTest -->
-        <div panel-name="test-xml-NewTest" class="panel">
+          </div> <!-- suite-suite-class-failed -->
+        </div> <!-- panel suite -->
+        <div panel-name="test-xml-suite" class="panel">
           <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\Coderz-test\Desktop\cucumberFramework\Automation\suite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite verbose=&quot;0&quot; name=&quot;NewTest&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Command line test&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;NewTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Command line test --&gt;
-&lt;/suite&gt; &lt;!-- NewTest --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-NewTest" class="panel">
+        <div panel-name="testlist-suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for NewTest</span>
+            <span class="header-content">Tests for suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test (1 class)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-NewTest" class="panel">
+        <div panel-name="group-suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for NewTest</span>
+            <span class="header-content">Groups for suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-NewTest" class="panel">
+        <div panel-name="times-suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for NewTest</span>
+            <span class="header-content">Times for suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_NewTest');
-function tableData_NewTest() {
+suiteTableInitFunctions.push('tableData_suite');
+function tableData_suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -187,32 +199,32 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test01')
 data.setCell(0, 2, 'NewTest')
-data.setCell(0, 3, 6);
-window.suiteTableData['NewTest']= { tableData: data, tableDiv: 'times-div-NewTest'}
+data.setCell(0, 3, 129);
+window.suiteTableData['suite']= { tableData: data, tableDiv: 'times-div-suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 ms</span>
-              <div id="times-div-NewTest">
-              </div> <!-- times-div-NewTest -->
+              <span class="suite-total-time">Total running time: 129 ms</span>
+              <div id="times-div-suite">
+              </div> <!-- times-div-suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-NewTest" class="panel">
+        <div panel-name="reporter-suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for NewTest</span>
+            <span class="header-content">Reporter output for suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-NewTest" class="panel">
+        <div panel-name="ignored-methods-suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-NewTest" class="panel">
+        <div panel-name="chronological-suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -220,6 +232,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">NewTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">test01</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
