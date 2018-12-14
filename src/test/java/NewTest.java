@@ -6,7 +6,7 @@ public class NewTest {
 	 @Test
 	 public void test01() {
 	 	  
-	 	  System.setProperty("webdriver.chrome.com", "C:\\Users\\Coderz-test\\Desktop\\cucumberFramework\\Automation\\chromedriver.exe");
+	 	  System.setProperty("webdriver.chrome.com", "C:\\chromedriver\\chromedriver.exe");
 	 	  WebDriver driver = new ChromeDriver();
 	 	  driver.get("https://www.google.com/");
 	 	  
